@@ -1,5 +1,5 @@
-import { objectToArray } from "../../helpers";
-import axios from "axios";
+import axios, { Method } from "axios";
+import { objectToArray } from "../helpers";
 
 const baseURL = "https://api.streamtime.net/";
 
@@ -13,7 +13,7 @@ const client = axios.create({
 
 type StreamtimeQueryParams = {
   url: string;
-  method?: string;
+  method?: Method;
   params?: null | object;
   data?: null | object;
 };
