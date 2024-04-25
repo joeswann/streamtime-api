@@ -53,6 +53,7 @@ export type StreamtimeInvoiceItem = {
   quantity: string | null;
   unitRate: string | null;
   totalAmountExTax: string;
+  totalAmountIncTax: string;
   orderId: number;
   taxName: string;
   taxRate: string;
