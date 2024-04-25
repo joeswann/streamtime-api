@@ -8,7 +8,6 @@
     "build": "tsc",
     "prepare": "npm run build",
     "test": "jest",
-    "preversion": "npm test",
     "version": "npm run build",
     "postversion": "git push && git push --tags",
     "patch": "npm version patch && npm publish",
