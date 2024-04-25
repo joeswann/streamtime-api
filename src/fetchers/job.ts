@@ -8,14 +8,14 @@ export const fetchJob = (jobId: number) =>
     url: `/v1/jobs/${jobId}`,
   });
 
-export const createJob = (job: StreamtimeJob) =>
+export const createJob = (job: Partial<StreamtimeJob>) =>
   request({
     method: "POST",
     url: `/v1/jobs`,
     data: job,
   });
 
-export const updateJob = (job: StreamtimeJob) =>
+export const updateJob = (job: Partial<StreamtimeJob>) =>
   request({
     method: "PUT",
     url: `/v1/jobs/${job.id}`,

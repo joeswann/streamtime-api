@@ -8,7 +8,10 @@ export const getJobItems = (jobId: string) =>
     url: `/v1/jobs/${jobId}/job_items`,
   });
 
-export const createJobItem = (jobId: number, jobItem: StreamtimeJobItem) =>
+export const createJobItem = (
+  jobId: number,
+  jobItem: Partial<StreamtimeJobItem>,
+) =>
   request({
     method: "POST",
     url: `/v1/jobs/${jobId}/job_items`,
@@ -21,7 +24,10 @@ export const getJobItem = (jobItemId: number) =>
     url: `/v1/job_items/${jobItemId}`,
   });
 
-export const updateJobItem = (jobItemId: number, jobItem: StreamtimeJobItem) =>
+export const updateJobItem = (
+  jobItemId: number,
+  jobItem: Partial<StreamtimeJobItem>,
+) =>
   request({
     method: "PUT",
     url: `/v1/job_items/${jobItemId}`,
@@ -34,7 +40,10 @@ export const getJobPhases = (jobId: string) =>
     url: `/v1/jobs/${jobId}/job_phases`,
   });
 
-export const createJobPhase = (jobId: number, jobPhase: StreamtimeJobItem) =>
+export const createJobPhase = (
+  jobId: number,
+  jobPhase: Partial<StreamtimeJobItem>,
+) =>
   request({
     method: "POST",
     url: `/v1/jobs/${jobId}/job_phases`,

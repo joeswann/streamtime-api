@@ -16,7 +16,7 @@ export const getJobItemUser = (jobItemUserId: number) =>
 
 export const createJobItemUser = (
   jobItemId: number,
-  jobItemUser: StreamtimeJobItemUser,
+  jobItemUser: Partial<StreamtimeJobItemUser>,
 ) =>
   request({
     method: "POST",
@@ -24,7 +24,9 @@ export const createJobItemUser = (
     data: jobItemUser,
   });
 
-export const updateJobItemUser = (jobItemUser: StreamtimeJobItemUser) =>
+export const updateJobItemUser = (
+  jobItemUser: Partial<StreamtimeJobItemUser>,
+) =>
   request({
     method: "PUT",
     url: `/v1/job_item_users/${jobItemUser.id}`,

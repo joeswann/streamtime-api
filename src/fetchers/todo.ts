@@ -2,14 +2,14 @@ import { StreamtimeSearchTodosType } from "../types/search";
 import { StreamtimeTodo } from "../types/todo";
 import { request } from "./client";
 
-export const createTodo = (todo: StreamtimeTodo) =>
+export const createTodo = (todo: Partial<StreamtimeTodo>) =>
   request({
     method: "POST",
     url: `/v1/logged_times`,
     data: todo,
   });
 
-export const createTodoBulk = (todos: StreamtimeTodo[]) =>
+export const createTodoBulk = (todos: Partial<StreamtimeTodo>[]) =>
   request({
     method: "POST",
     url: `/v1/logged_times/bulk`,
@@ -28,7 +28,7 @@ export const deleteTodo = (todoId: number) =>
     url: `/v1/logged_times/${todoId}`,
   });
 
-export const updateTodo = (todo: StreamtimeTodo) =>
+export const updateTodo = (todo: Partial<StreamtimeTodo>) =>
   request({
     method: "PUT",
     url: `/v1/logged_times/${todo.id}`,

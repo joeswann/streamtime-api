@@ -8,14 +8,14 @@ export const getContact = (contactId: number) =>
     url: `/v1/contacts/${contactId}`,
   });
 
-export const updateContact = (contact: StreamtimeContact) =>
+export const updateContact = (contact: Partial<StreamtimeContact>) =>
   request({
     method: "PUT",
     url: `/v1/contacts/${contact.id}`,
     data: contact,
   });
 
-export const createContact = (contact: StreamtimeContact) =>
+export const createContact = (contact: Partial<StreamtimeContact>) =>
   request({
     method: "POST",
     url: `/v1/contacts`,

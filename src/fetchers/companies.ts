@@ -2,14 +2,14 @@ import { StreamtimeCompany } from "../types/company";
 import { StreamtimeSearchType } from "../types/search";
 import { request } from "./client";
 
-export const createCompany = (company: StreamtimeCompany) =>
+export const createCompany = (company: Partial<StreamtimeCompany>) =>
   request({
     method: "POST",
     url: `/v1/companies`,
     data: company,
   });
 
-export const updateCompany = (company: StreamtimeCompany) =>
+export const updateCompany = (company: Partial<StreamtimeCompany>) =>
   request({
     method: "PUT",
     url: `/v1/companies/${company.id}`,
