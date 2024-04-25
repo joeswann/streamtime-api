@@ -1,4 +1,4 @@
-import { StreamtimeJobItem } from "../types/jobItem";
+import { StreamtimeJobItem } from "../types";
 import { StreamtimeSearchType } from "../types/search";
 import { request } from "./client";
 
