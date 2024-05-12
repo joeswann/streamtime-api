@@ -34,6 +34,12 @@ export const updateJobItem = (
     data: jobItem,
   });
 
+export const deleteJobItem = (jobItemId: number) =>
+  request({
+    method: "DELETE",
+    url: `/v1/job_items/${jobItemId}`,
+  });
+
 export const getJobPhases = (jobId: string) =>
   request({
     method: "GET",
@@ -72,5 +78,3 @@ export const searchJobItems = (search: StreamtimeSearchType) =>
     url: `/v1/job_items/search`,
     data: search,
   });
-
-// SEARCH Job Item Users
